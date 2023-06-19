@@ -33,11 +33,13 @@
 
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0"></script>
   <script>
+    let data; // Declare the data variable globally
+
     // Load the metadata CSV file
     fetch('transcription_verification/data/metadata.csv')
       .then(response => response.text())
       .then(csv => {
-        const data = Papa.parse(csv, { header: true }).data;
+        data = Papa.parse(csv, { header: true }).data; // Assign the parsed data to the global variable
 
         // Get the table body element
         const tableBody = document.getElementById('table-body');
@@ -52,7 +54,7 @@
           // Create audio element and set the source
           const audio = document.createElement('audio');
           audio.controls = true;
-          audio.src = `transcription_verification/data/${file_name}`;
+          audio.src = 'transcription_verification/data/' + file_name; // Fix the audio source path
 
           // Create sentence cell
           const transcriptionCell = document.createElement('td');
