@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transcription Verification</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        audio {
+            width: 100%;
+        }
+        
+        textarea {
+            width: 100%;
+            resize: vertical;
+        }
+        
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Audio File</th>
+                <th>Transcription</th>
+                <th>Verified</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!-- Table rows will be dynamically added here -->
+        </tbody>
+    </table>
+    
+    <button onclick="downloadCSV()">Download Metadata CSV</button>
+    
+    <script>
+        // Fetch the metadata CSV file
+        fetch('metadata.csv')
+            .then(response => response.text())
+            .then(data => parseCSV(data));
+        
+        // Function to parse the CSV data and populate the table
+        function parseCSV(csvData) {
+            const rows = csvData.split('\n');
+            const tableBody = document.getElementById('table-body');
+            
+            for (let i = 1; i < rows.length; i++) {
+                const columns = rows[i].split(',');
+                const fileName = columns[0].trim();
+                const sentence = columns[1].trim();
+                
+                const audioFile = fileName.replace('data/', '');
+                
+                const audioRow = document.createElement('tr');
+                const audioCell = document.createElement('td');
+                const audioElement = document.createElement('audio');
+                audioElement.controls = true;
+                audioElement.src = audioFile;
+                
+                audioCell.appendChild(audioElement);
+                audioRow.appendChild(audioCell);
+                
+                const transcriptionCell = document.createElement('td');
+                const transcriptionTextarea = document.createElement('textarea');
+                transcriptionTextarea.value = sentence;
+                transcriptionTextarea.oninput = updateTranscription;
+                
+                transcriptionCell.appendChild(transcriptionTextarea);
+                audioRow.appendChild(transcriptionCell);
+                
+                const verifiedCell = document.createElement('td');
+                const verifiedCheckbox = document.createElement('input');
+                verifiedCheckbox.type = 'checkbox';
+                verifiedCheckbox.onchange = updateVerification;
+                
+                verifiedCell.appendChild(verifiedCheckbox);
+                audioRow.appendChild(verifiedCell);
+                
+                tableBody.appendChild(audioRow);
+            }
+        }
+        
+        // Function to update the transcription in the table
+        function updateTranscription(event) {
+            const textarea = event.target;
+            const newValue = textarea.value;
+            const row = textarea.parentNode.parentNode;
+            const fileName = row.querySelector('audio').src;
+            
+            // Update the transcription in the metadata CSV
+            updateCSV(fileName, newValue);
+        }
+        
+        // Function to update the verification status in the table
+        function updateVerification(event) {
+            const checkbox = event.target;
+            const newValue = checkbox.checked;
+            const row = checkbox.parentNode.parentNode;
+            const fileName = row.querySelector('audio').src;
+            
+            // Update the verification status in the metadata CSV
+            updateCSV(fileName, null, newValue);
+        }
+        
+        // Function to update the metadata CSV file
+        function updateCSV(fileName, transcriptionValue, verificationValue) {
+            fetch('metadata.csv')
+                .then(response => response.text())
+                .then(data => {
+                    const rows = data.split('\n');
+                    
+                    for (let i = 1; i < rows.length; i++) {
+                        const columns = rows[i].split(',');
+                        const file = columns[0].trim();
+                        
+                        if (file === fileName) {
+                            // Update the transcription value if provided
+                            if (transcriptionValue !== undefined) {
+                                columns[1] = transcriptionValue;
+                            }
+                            
+                            // Update the verification value if provided
+                            if (verificationValue !== undefined) {
+                                columns[2] = verificationValue;
+                            }
+                            
+                            // Reconstruct the row and update the metadata CSV data
+                            rows[i] = columns.join(',');
+                            break;
+                        }
+                    }
+                    
+                    const updatedData = rows.join('\n');
+                    saveCSV(updatedData);
+                });
+        }
+        
+        // Function to save the updated metadata CSV file
+        function saveCSV(data) {
+            const blob = new Blob([data], { type: 'text/csv' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'metadata.csv';
+            link.click();
+        }
+        
+        // Function to download the metadata CSV file
+        function downloadCSV() {
+            fetch('metadata.csv')
+                .then(response => response.blob())
+                .then(blob => {
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'metadata.csv';
+                    link.click();
+                });
+        }
+    </script>
+</body>
+</html>
