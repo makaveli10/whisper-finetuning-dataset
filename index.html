@@ -44,7 +44,7 @@
 
         // Loop through the data and create table rows
         data.forEach(row => {
-          const { file_name, transcription } = row;
+          const { file_name, sentence } = row;
 
           // Create a new table row
           const newRow = document.createElement('tr');
@@ -54,14 +54,14 @@
           audio.controls = true;
           audio.src = `transcription_verification/data/${file_name}`;
 
-          // Create transcription cell
+          // Create sentence cell
           const transcriptionCell = document.createElement('td');
           const transcriptionInput = document.createElement('input');
           transcriptionInput.type = 'text';
-          transcriptionInput.value = transcription;
+          transcriptionInput.value = sentence;
           transcriptionInput.addEventListener('input', () => {
-            // Update the transcription value in the dataset
-            row.transcription = transcriptionInput.value;
+            // Update the sentence value in the dataset
+            row.sentence = transcriptionInput.value;
           });
           transcriptionCell.appendChild(transcriptionInput);
 
