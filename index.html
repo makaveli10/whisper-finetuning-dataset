@@ -5,103 +5,210 @@
   <style>
     table {
       border-collapse: collapse;
-    }
-
-    th, td {
-      padding: 8px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
-
-    audio {
       width: 100%;
     }
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+      max-width: 0;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .editable {
+      white-space: pre-wrap;
+      overflow: auto;
+    }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.1/papaparse.min.js"></script>
 </head>
 <body>
   <h1>Transcription Verification</h1>
-  <table>
-    <tr>
-      <th>Audio File</th>
-      <th>Transcription</th>
-      <th>Verified</th>
-    </tr>
-    <tbody id="table-body"></tbody>
+  <table id="audioTable">
+    <thead>
+      <tr>
+        <th>Audio File</th>
+        <th>Transcription</th>
+        <th>Verified</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
   </table>
 
-  <button onclick="downloadCSV()">Download Metadata</button>
+  <button id="saveChangesButton" style="display: none;">Save Changes</button>
 
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0"></script>
   <script>
-    let data; // Declare the data variable globally
+    const metadataFile = 'transcription_verification/metadata.csv';
+    const dataDirectory = 'transcription_verification';
+    const pageSize = 20;
+    let audioElements = [];
+    let modifiedRows = [];
+    let currentPage = 0;
 
-    // Load the metadata CSV file
-    fetch('transcription_verification/data/metadata.csv')
+    // Fetch metadata.csv and populate the table
+    fetch(metadataFile)
       .then(response => response.text())
-      .then(csv => {
-        data = Papa.parse(csv, { header: true }).data; // Assign the parsed data to the global variable
+      .then(csvData => {
+        Papa.parse(csvData, {
+          delimiter: ',',
+          skipEmptyLines: true,
+          complete: function(results) {
+            const audioTable = document.getElementById('audioTable');
+            const rows = results.data;
 
-        // Get the table body element
-        const tableBody = document.getElementById('table-body');
+            function loadAudio(startIndex, endIndex) {
+              const audioTableBody = document.getElementById('audioTable').querySelector('tbody');
+                        
+              // Clear existing rows
+              audioTableBody.innerHTML = '';
+                        
+              for (let i = startIndex; i < endIndex; i++) {
+                if (i >= rows.length) break;
+                if (i === 0) continue;
+                const row = rows[i];
+                const audioFile = row[0];
+                const transcription = row[1];
+                const verified = Number(row[row.length - 1]);
+              
+                const audioFilePath = `${dataDirectory}/${audioFile}`;
+              
+                const audioRow = document.createElement('tr');
+              
+                const audioFileCell = document.createElement('td');
+                const audio = document.createElement('audio');
+                audio.controls = true;
+                audio.src = audioFilePath;
+                audioFileCell.appendChild(audio);
+                audioFileCell.appendChild(document.createElement('br'));
+                audioFileCell.appendChild(document.createTextNode(audioFile));
+                audioRow.appendChild(audioFileCell);
+              
+                const transcriptionCell = document.createElement('td');
+                const transcriptionDiv = document.createElement('div');
+                transcriptionDiv.className = 'editable';
+                transcriptionDiv.textContent = transcription;
+                transcriptionDiv.contentEditable = true;
+                transcriptionDiv.addEventListener('input', (event) => {
+                  row[1] = event.target.textContent;
+                  enableSaveChangesButton();
+                });
+                transcriptionCell.appendChild(transcriptionDiv);
+                audioRow.appendChild(transcriptionCell);
+              
+                const verifiedCell = document.createElement('td');
+                const verifiedCheckbox = document.createElement('input');
+                verifiedCheckbox.type = 'checkbox';
+                verifiedCheckbox.checked = verified === 1;
+                verifiedCheckbox.addEventListener('change', (event) => {
+                  row[row.length - 1] = event.target.checked ? 1 : 0;
+                  enableSaveChangesButton();
+                });
+                verifiedCell.appendChild(verifiedCheckbox);
+                audioRow.appendChild(verifiedCell);
+              
+                audioTableBody.appendChild(audioRow);
+              
+                audioElements.push(audio);
+                modifiedRows.push(row);
+              }
+            }
 
-        // Loop through the data and create table rows
-        data.forEach(row => {
-          const { file_name, sentence } = row;
+            function showPage(pageNumber) {
+              const startIndex = pageNumber * pageSize;
+              const endIndex = startIndex + pageSize;
+              const totalPages = Math.ceil(rows.length / pageSize);
 
-          // Create a new table row
-          const newRow = document.createElement('tr');
+              const audioTableBody = audioTable.querySelector('tbody');
 
-          // Create audio element and set the source
-          const audio = document.createElement('audio');
-          audio.controls = true;
-          audio.src = 'transcription_verification/data/' + file_name; // Fix the audio source path
+              // Clear existing rows
+              audioTableBody.innerHTML = '';
 
-          // Create sentence cell
-          const transcriptionCell = document.createElement('td');
-          const transcriptionInput = document.createElement('input');
-          transcriptionInput.type = 'text';
-          transcriptionInput.value = sentence;
-          transcriptionInput.addEventListener('input', () => {
-            // Update the sentence value in the dataset
-            row.sentence = transcriptionInput.value;
-          });
-          transcriptionCell.appendChild(transcriptionInput);
+              loadAudio(startIndex, endIndex);
 
-          // Create verified checkbox cell
-          const verifiedCell = document.createElement('td');
-          const verifiedCheckbox = document.createElement('input');
-          verifiedCheckbox.type = 'checkbox';
-          verifiedCheckbox.addEventListener('change', () => {
-            // Update the 'Verified' status in the dataset
-            row.verified = verifiedCheckbox.checked ? 'Yes' : 'No';
-          });
-          verifiedCell.appendChild(verifiedCheckbox);
+              // Update pagination controls
+              const paginationInfo = document.getElementById('paginationInfo');
+              paginationInfo.textContent = `Page ${pageNumber + 1} of ${totalPages}`;
 
-          // Append cells to the new row
-          newRow.appendChild(audio);
-          newRow.appendChild(transcriptionCell);
-          newRow.appendChild(verifiedCell);
+              const previousButton = document.getElementById('previousButton');
+              const nextButton = document.getElementById('nextButton');
 
-          // Append the new row to the table body
-          tableBody.appendChild(newRow);
+              if (pageNumber === 0) {
+                previousButton.disabled = true;
+              } else {
+                previousButton.disabled = false;
+              }
+            
+              if (pageNumber === totalPages - 1) {
+                nextButton.disabled = true;
+              } else {
+                nextButton.disabled = false;
+              }
+            }
+
+            function enableSaveChangesButton() {
+              const saveChangesButton = document.getElementById('saveChangesButton');
+              saveChangesButton.style.display = 'block';
+            }
+
+            function disableSaveChangesButton() {
+              const saveChangesButton = document.getElementById('saveChangesButton');
+              saveChangesButton.style.display = 'none';
+            }
+
+            function downloadCSV(data) {
+              const csv = Papa.unparse(data);
+              const csvData = new Blob([csv], { type: 'text/csv' });
+              const csvUrl = URL.createObjectURL(csvData);
+              const link = document.createElement('a');
+              link.href = csvUrl;
+              link.download = 'metadata_modified.csv';
+              link.click();
+            }
+
+            const saveChangesButton = document.getElementById('saveChangesButton');
+            saveChangesButton.addEventListener('click', () => {
+              downloadCSV(modifiedRows);
+              disableSaveChangesButton();
+            });
+
+            const previousButton = document.createElement('button');
+            previousButton.textContent = 'Previous';
+            previousButton.id = 'previousButton';
+            previousButton.disabled = true;
+            previousButton.addEventListener('click', () => {
+              if (currentPage > 0) {
+                currentPage--;
+                showPage(currentPage);
+              }
+            });
+            audioTable.parentNode.insertBefore(previousButton, audioTable);
+
+            const nextButton = document.createElement('button');
+            nextButton.textContent = 'Next';
+            nextButton.id = 'nextButton';
+            nextButton.addEventListener('click', () => {
+              const totalPages = Math.ceil(rows.length / pageSize);
+              if (currentPage < totalPages - 1) {
+                currentPage++;
+                showPage(currentPage);
+              }
+            });
+            audioTable.parentNode.insertBefore(nextButton, audioTable);
+
+            const paginationInfo = document.createElement('span');
+            paginationInfo.id = 'paginationInfo';
+            audioTable.parentNode.insertBefore(paginationInfo, audioTable);
+
+            showPage(currentPage);
+          }
         });
       });
-
-    // Download the updated metadata.csv file
-    function downloadCSV() {
-      const csvData = Papa.unparse(data, { header: true });
-      const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
-      const link = document.createElement('a');
-      if (link.download !== undefined) {
-        const url = URL.createObjectURL(blob);
-        link.setAttribute('href', url);
-        link.setAttribute('download', 'metadata.csv');
-        link.style.visibility = 'hidden';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      }
-    }
   </script>
 </body>
 </html>
