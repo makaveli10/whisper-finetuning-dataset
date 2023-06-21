@@ -1,4 +1,4 @@
-file_name,sentence,verified
+file_name,sentence,verified,checked
 data/train/2_0.mp3,"Okay, so creating Debian-based embedded systems using Debian OS. My name is Chris and I'm",0,0
 data/train/2_1.mp3,an engineer at Collabora. I work on creating custom distributions for our clients. Usually,0,0
 data/train/2_2.mp3,"these custom distros end up running on embedded platforms, embedded little boards that customers",0,0
