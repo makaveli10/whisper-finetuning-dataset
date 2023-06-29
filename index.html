@@ -46,6 +46,7 @@
   <script>
     const metadataFile = 'transcription_verification/metadata.csv';
     const dataDirectory = 'transcription_verification';
+
     const pageSize = 20;
     let audioElements = [];
     let modifiedRows = [];
@@ -63,11 +64,8 @@
             const rows = results.data;
 
             function loadAudio(startIndex, endIndex) {
-              const audioTableBody = document.getElementById('audioTable').querySelector('tbody');
-                        
-              // Clear existing rows
-              audioTableBody.innerHTML = '';
-                        
+              const audioTableBody = document.createElement('tbody');
+              
               for (let i = startIndex; i < endIndex; i++) {
                 if (i >= rows.length) break;
                 if (i === 0) continue;
@@ -88,7 +86,7 @@
                 audio.src = audioFilePath;
                 
                 // set default playback rate to 1.5
-                audio.defaultPlaybackRate = 1;
+                audio.defaultPlaybackRate = 1.25;
                 audio.playbackRate = audio.defaultPlaybackRate;
                 audioFileCell.appendChild(audio);
                 audioFileCell.appendChild(document.createElement('br'));
@@ -129,6 +127,8 @@
                 audioElements.push(audio);
                 modifiedRows.push(row);
               }
+              
+              return audioTableBody;
             }
 
             function showPage(pageNumber) {
@@ -136,12 +136,13 @@
               const endIndex = startIndex + pageSize;
               const totalPages = Math.ceil(rows.length / pageSize);
 
-              const audioTableBody = audioTable.querySelector('tbody');
+              const audioTableBody = document.getElementById('audioTable').querySelector('tbody');
 
               // Clear existing rows
               audioTableBody.innerHTML = '';
 
-              loadAudio(startIndex, endIndex);
+              const newAudioTableBody = loadAudio(startIndex, endIndex);
+              audioTable.appendChild(newAudioTableBody);
 
               // Update pagination controls
               const paginationInfo = document.getElementById('paginationInfo');
