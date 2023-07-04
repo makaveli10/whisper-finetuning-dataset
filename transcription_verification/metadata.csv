@@ -1644,23 +1644,23 @@ data/train/7_295.mp3,So thank you.,0,0
 data/train/6_0.mp3,"Hello everyone, thank you for joining this virtual talk here at the Live Embedded event.",0,0
 data/train/6_1.mp3,"Today I'm here to talk about Pipeware, which is a new technology for Linux that is essentially a multimedia service.",0,0
 data/train/6_2.mp3,"that has been in development for quite a long time, I would say more than five years and now it's mature enough and ready to be used for the automotive world and the embedded world",0,0
-data/train/6_3.mp3,"So yeah, before moving on to the main topic of this talk and see how Piper works and how it can be used for the automotive and embedded world, I'd like to do a quick introduction to myself first.",0,0
+data/train/6_3.mp3,"So yeah, before moving on to the main topic of this talk and see how Pipewire works and how it can be used for the automotive and embedded world, I'd like to do a quick introduction to myself first.",0,1
 data/train/6_4.mp3,"So as you can see, my name is Julian.",0,0
 data/train/6_5.mp3,I am a Spanish multimedia software developer working at Collabora.,0,0
 data/train/6_6.mp3,I joined the company quite recently.,0,0
 data/train/6_7.mp3,I joined at the beginning of 2019.,0,0
-data/train/6_8.mp3,"And since I joined the company, I've been part of the multimedia team, and I've been mostly working with Pipeware and distributor projects.",0,0
-data/train/6_9.mp3,"So that being said, let's move on to the main topic, which is, what is Pipeware?",0,0
+data/train/6_8.mp3,"And since I joined the company, I've been part of the multimedia team, and I've been mostly working with Pipewire and distributor projects.",0,1
+data/train/6_9.mp3,"So that being said, let's move on to the main topic, which is, what is Pipewire?",0,1
 data/train/6_10.mp3,What is this new technology that is emerging and is gaining more and more popularity nowadays?,0,0
 data/train/6_11.mp3,"Well, as I said at the beginning,",0,0
-data/train/6_12.mp3,"Piper is essentially a fresh multimedia service for Linux that can handle any kind of multimedia devices, doesn't matter if it's video or audio.",0,0
+data/train/6_12.mp3,"Pipewire is essentially a fresh multimedia service for Linux that can handle any kind of multimedia devices, doesn't matter if it's video or audio.",0,1
 data/train/6_13.mp3,It was originally meant to handle only video devices.,0,0
 data/train/6_14.mp3,"In fact, its original name was Pulse Video.",0,0
-data/train/6_15.mp3,"But over the years, it evolved, and now it was renamed to Piper, and now it's more of a generic multimedia framework that can handle both devices.",0,0
+data/train/6_15.mp3,"But over the years, it evolved, and now it was renamed to Pipewire, and now it's more of a generic multimedia framework that can handle both devices.",0,1
 data/train/6_16.mp3,"And the reason for that is because it started addressing many issues, you know, previous audio.",0,0
 data/train/6_17.mp3,services were having.,0,0
 data/train/6_18.mp3,So at the end the developers they decided to just handle everything and at some point replace those old multimedia services.,0,0
-data/train/6_19.mp3,"So basically with Piper, what you can do is applications, they can capture video from different video sources, such as cameras or even graphic sources.",0,0
+data/train/6_19.mp3,"So basically with Pipewire, what you can do is applications, they can capture video from different video sources, such as cameras or even graphic sources.",0,1
 data/train/6_20.mp3,"For example, if you want to capture your desktop with Wayland or Vulkan.",0,0
 data/train/6_21.mp3,And you can also obviously do capturing and playback of audio.,0,0
 data/train/6_22.mp3,in other devices.,0,0
@@ -1668,43 +1668,43 @@ data/train/6_23.mp3,"For example, you can capture audio from a microphone and yo
 data/train/6_24.mp3,So applications can do all of that very easily without worrying about configuring devices and using low-level APIs such as Video4Linux when you want to capture video from cameras or Vulkan or Wayland complex APIs or,0,0
 data/train/6_25.mp3,"You know, for audio, the also in Bluetooth, low-level and complex APIs.",0,0
 data/train/6_26.mp3,Applications don't need to worry about that.,0,0
-data/train/6_27.mp3,"The way it works, Piper is a daemon that runs the background and applications connect to the daemon and they basically tell them, hey Piper, I want to just capture buffers from this device or I want to play buffers on this device and that's it.",0,0
+data/train/6_27.mp3,"The way it works, Pipewire is a daemon that runs the background and applications connect to the daemon and they basically tell them, hey Pipewire, I want to just capture buffers from this device or I want to play buffers on this device and that's it.",0,1
 data/train/6_28.mp3,"They don't need to worry about checking if the device is being used, if it's not used, if they have permissions or anything like that.",0,0
-data/train/6_29.mp3,All of that is handled automatically by Piper.,0,0
-data/train/6_30.mp3,So why do we need Piper?,0,0
+data/train/6_29.mp3,All of that is handled automatically by Pipewire.,0,1
+data/train/6_30.mp3,So why do we need Pipewire?,0,1
 data/train/6_31.mp3,"I mean, we already have, you know, in one hand we have PulseAudio and we have Jack, so why do we need an extra one?",0,0
 data/train/6_32.mp3,"Well, you know, so PulseAudio is like a generic audio device, you know,",0,0
 data/train/6_33.mp3,"service that handles, you know, all of that in a generic way for you.",0,0
 data/train/6_34.mp3,"And Jack, audio server, is more focused on professional and low latency audio processing.",0,0
 data/train/6_35.mp3,But what if an application wants to do a little bit of both?,0,0
 data/train/6_36.mp3,"You know, you can't.",0,0
-data/train/6_37.mp3,"So, one of the problems Piper wants to solve is the unification of",0,0
+data/train/6_37.mp3,"So, one of the problems Pipewire wants to solve is the unification of",0,1
 data/train/6_38.mp3,"PulseAudio and Jack, because it wants to replace them, get rid of them, and have a system running only one multimedia framework.",0,0
 data/train/6_39.mp3,"Simplifying a lot the Linux Multimedia Stack, because otherwise it's quite complex, because of all these different services.",0,0
-data/train/6_40.mp3,"Now, another issue that Piper wants to solve is security.",0,0
+data/train/6_40.mp3,"Now, another issue that Pipewire wants to solve is security.",0,1
 data/train/6_41.mp3,"So, at the moment, you know, the current approaches, the",0,0
 data/train/6_42.mp3,"the current multimedia frameworks, they don't handle containers properly, such as Flatpak or Wayland, because their permissions, basically, they rely on the video and audio user groups.",0,0
-data/train/6_43.mp3,Piper doesn't rely on that.,0,0
-data/train/6_44.mp3,"Piper fully supports containers properly, so it basically asks the container if he can access the device, and if he cannot access the device, it's going to basically tell the client his device cannot be accessed.",0,0
+data/train/6_43.mp3,Pipewire doesn't rely on that.,0,1
+data/train/6_44.mp3,"Pipewire fully supports containers properly, so it basically asks the container if he can access the device, and if he cannot access the device, it's going to basically tell the client his device cannot be accessed.",0,1
 data/train/6_45.mp3,"For security, especially nowadays, Pipewire is much, much safer and better.",0,0
 data/train/6_46.mp3,The third point that Pipewire wants to address is low latency.,0,0
 data/train/6_47.mp3,"Pipewire is low latency and real-time capable, and it can handle very small buffer sizes of up to 32 samples, which is only one or two milliseconds of latency.",0,0
 data/train/6_48.mp3,Not even Jack can do that.,0,0
 data/train/6_49.mp3,"And last and last least, it's flexibility.",0,0
-data/train/6_50.mp3,So Piper is very flexible because it exposes an API for users to write their own session manager and basically tell Piper how to behave based on different use cases and scenarios.,0,0
+data/train/6_50.mp3,So Pipewire is very flexible because it exposes an API for users to write their own session manager and basically tell Pipewire how to behave based on different use cases and scenarios.,0,1
 data/train/6_51.mp3,"So basically we have simplicity, security, performance, and flexibility.",0,0
-data/train/6_52.mp3,"So if you have a look at the Linux multimedia stack, if we are running the PyPore daemon, we can see that there's something like that.",0,0
+data/train/6_52.mp3,"So if you have a look at the Linux multimedia stack, if we are running the Pipewire daemon, we can see that there's something like that.",0,1
 data/train/6_53.mp3,"So at the bottom, we have the kernel with all the different drivers.",0,0
 data/train/6_54.mp3,"And on the top, we have the different applications, the different multimedia applications.",0,0
-data/train/6_55.mp3,And the PyPore is like a middle layer in between those two layers.,0,0
+data/train/6_55.mp3,And the Pipewire is like a middle layer in between those two layers.,0,1
 data/train/6_56.mp3,where applications connect to it.,0,0
-data/train/6_57.mp3,"And then Piper manages those connections and uses internally the kernel low-level APIs, multimedia APIs.",0,0
+data/train/6_57.mp3,"And then Pipewire manages those connections and uses internally the kernel low-level APIs, multimedia APIs.",0,1
 data/train/6_58.mp3,"And those connections, all of that is handled automatically by the session manager, which runs in a different process.",0,0
 data/train/6_59.mp3,So there's at least three processes going on here.,0,0
-data/train/6_60.mp3,"There's the application process, the PyCore daemon process, and the PyProcessingManual process.",0,0
+data/train/6_60.mp3,"There's the application process, the Pipewire daemon process, and the PyProcessingManual process.",0,1
 data/train/6_61.mp3,And they all communicate each other via sockets.,0,0
 data/train/6_62.mp3,"Using a protocol, you know, the protocol can be many different protocols can be used.",0,0
-data/train/6_63.mp3,"There is a pipe, there is Piper has its own native protocol, but others can be used.",0,0
+data/train/6_63.mp3,"There is a pipe, there is Pipewire has its own native protocol, but others can be used.",0,1
 data/train/6_64.mp3,"You can use, for example, the Wayland protocol, or you can even implement your own protocol if you want.",0,0
 data/train/6_65.mp3,"But yeah, so in this example, for example, you have a look at the song recorder on the top right corner.",0,0
 data/train/6_66.mp3,"You can see that this linked with the green square, which is a node, the green processing element, which is, the green processing elements here are more like converters.",0,0
@@ -1712,75 +1712,75 @@ data/train/6_67.mp3,"You know, they do audio conversion, they do video conversio
 data/train/6_68.mp3,"all of that, and then we have the purple nodes that are sinks and sources that are connected to the device.",0,0
 data/train/6_69.mp3,"So, for example, different applications could connect to the same node and the session manager decides whether he wants to keep the previous link and play both of them at the same time or just remove the previous one and only connect the new one.",0,0
 data/train/6_70.mp3,"So, yeah, the session manager has control of everything.",0,0
-data/train/6_71.mp3,"So if I want to use PipeWare on my system, do I have to update all my multimedia applications and use a new PipeWare API?",0,0
-data/train/6_72.mp3,"Not necessarily, because the PipeWare project also provides compatibility APIs built on top of PipeWare.",0,0
+data/train/6_71.mp3,"So if I want to use PipeWire on my system, do I have to update all my multimedia applications and use a new PipeWire API?",0,1
+data/train/6_72.mp3,"Not necessarily, because the PipeWire project also provides compatibility APIs built on top of PipeWire.",0,1
 data/train/6_73.mp3,"So for example, there is an ALSA.",0,0
-data/train/6_74.mp3,"For ALS applications, there is a PiPore PCM plugin that does the bridge between the ALS API and internally connects to the PiPore daemon and exposes all these different PiPore nodes.",0,0
-data/train/6_75.mp3,"For pulse or inject applications, the same approach is done by having replacement for libpulse.so and libjack.so.",0,0
-data/train/6_76.mp3,"Applications don't need to be updated right away if you want to use Pipeware, because thanks to these compatibility APIs,",0,0
+data/train/6_74.mp3,"For ALSA applications, there is a Pipewire PCM plugin that does the bridge between the ALSA API and internally connects to the Pipewire daemon and exposes all these different Pipewire nodes.",0,1
+data/train/6_75.mp3,"For PulseAudio and jack applications, the same approach is done by having replacement for libpulse.so and libjack.so.",0,1
+data/train/6_76.mp3,"Applications don't need to be updated right away if you want to use Pipewire, because thanks to these compatibility APIs,",0,1
 data/train/6_77.mp3,everything works fine.,0,0
-data/train/6_78.mp3,"But eventually, in the future, it's nice for the applications to change and use the Piper API to remove more complexity in the multimeter stack.",0,0
-data/train/6_79.mp3,"So, in terms of architecture and design, Piper basically follows the same design of most of open source projects.",0,0
+data/train/6_78.mp3,"But eventually, in the future, it's nice for the applications to change and use the Pipewire API to remove more complexity in the multimedia stack.",0,1
+data/train/6_79.mp3,"So, in terms of architecture and design, Pipewire basically follows the same design of most of open source projects.",0,1
 data/train/6_80.mp3,"So, it's modular and it has plugins.",0,0
-data/train/6_81.mp3,"So, basically a module in Piper is something, it's basically an API.",0,0
+data/train/6_81.mp3,"So, basically a module in Pipewire is something, it's basically an API.",0,1
 data/train/6_82.mp3,"So, it's, for example, you have a module for Bluetooth, you have a module for",0,0
-data/train/6_83.mp3,"For video for Linux, you have a module for Wayland, you have a module for Vulkan, you have a module for all these different low-level APIs.",0,0
-data/train/6_84.mp3,You have a module for Alzhe.,0,0
+data/train/6_83.mp3,"For video4Linux, you have a module for Wayland, you have a module for Vulkan, you have a module for all these different low-level APIs.",0,1
+data/train/6_84.mp3,You have a module for ALSA.,0,1
 data/train/6_85.mp3,And then plugins are basically elements inside these modules that implement different functionalities.,0,0
 data/train/6_86.mp3,"So, for example, you have elements which are nodes that implement audio mixing.",0,0
 data/train/6_87.mp3,"You have also format conversion, like some video conversion or audio conversion.",0,0
 data/train/6_88.mp3,Then you have also resampling.,0,0
-data/train/6_89.mp3,"So you basically have, you can write plugins for Pipel that do any kind of different",0,0
+data/train/6_89.mp3,"So you basically have, you can write plugins for Pipewire that do any kind of different",0,1
 data/train/6_90.mp3,media processing.,0,0
 data/train/6_91.mp3,So it's very similar to GStreamer.,0,0
 data/train/6_92.mp3,"You know, it's graph-based like GStreamer.",0,0
 data/train/6_93.mp3,Think of nodes as GStreamer elements and ports as GStreamer pads.,0,0
-data/train/6_94.mp3,And obviously links are objects in Piper.,0,0
-data/train/6_95.mp3,"You know, it's not like GStreamer where, you know, you just link two elements in Piper.",0,0
+data/train/6_94.mp3,And obviously links are objects in Pipewire.,0,1
+data/train/6_95.mp3,"You know, it's not like GStreamer where, you know, you just link two elements in Pipewire.",0,1
 data/train/6_96.mp3,You have to create the link and then you have to tell what are the input and output nodes,0,0
-data/train/6_97.mp3,"Also, different to the streamer, Piper is multiprocess, as I said before, so the daemon is charged, it runs in the background and is charged to process most of the data.",0,0
+data/train/6_97.mp3,"Also, different to the streamer, Pipewire is multiprocess, as I said before, so the daemon is charged, it runs in the background and is charged to process most of the data.",0,1
 data/train/6_98.mp3,"However, this is not...",0,0
 data/train/6_99.mp3,"100% necessary if you have, for example, a slow node.",0,0
 data/train/6_100.mp3,Clients have the ability to run nodes locally and avoid stalling the daemon in case a node is very slow.,0,0
 data/train/6_101.mp3,"This is, for example, the case for Bluetooth nodes, which can be very slow, especially when connecting and disconnecting a new Bluetooth device.",0,0
 data/train/6_102.mp3,"And so again, multiprocess and also the external session manager that configures all the links, nodes, these runs also into its own process.",0,0
 data/train/6_103.mp3,"you know, communicating and they all communicating each other with sockets.",0,0
-data/train/6_104.mp3,"Then, finally, the pipework, it's different from",0,0
+data/train/6_104.mp3,"Then, finally, the pipewire, it's different from",0,1
 data/train/6_105.mp3,the remaining open source project because it only depends on its simple plugin API library.,0,0
 data/train/6_106.mp3,It doesn't depend on anything else.,0,0
-data/train/6_107.mp3,It doesn't depend on JLib or any other famous open source library.,0,0
-data/train/6_108.mp3,And it does that because it really wants to achieve low TPU usage and high performance.,0,0
+data/train/6_107.mp3,It doesn't depend on glib or any other famous open source library.,0,1
+data/train/6_108.mp3,And it does that because it really wants to achieve low CPU usage and high performance.,0,1
 data/train/6_109.mp3,"So this SPA library is extremely simple and lightweight, and it's used for generic, it's used as a generic purpose multimedia library.",0,0
 data/train/6_110.mp3,"With that library, that library has basically helped us to do audio conversion, audio mixing, audio resampling, and it also provides some,",0,0
 data/train/6_111.mp3,"structures, basic data structures such as hash tables or lists or arrays and all of that, and basic video helper functionality.",0,0
 data/train/6_112.mp3,It's a mostly header-only C library with no dependencies.,0,0
-data/train/6_113.mp3,"So thanks to that, the performance and efficiency of Piper is very impressive because it follows a static co-design approach.",0,0
+data/train/6_113.mp3,"So thanks to that, the performance and efficiency of Pipewire is very impressive because it follows a static co-design approach.",0,1
 data/train/6_114.mp3,There's hardly any mallocs.,0,0
-data/train/6_115.mp3,"If you grab for malloc in the Piper project, you are not going to see a lot of them.",0,0
+data/train/6_115.mp3,"If you grab for malloc in the Pipewire project, you are not going to see a lot of them.",0,1
 data/train/6_116.mp3,"And it also uses modern Linux APIs, memfd and dmabuf to zero copy buffers from device to memory.",0,0
 data/train/6_117.mp3,So thanks to EventFD and TimerD for scheduling.,0,0
-data/train/6_118.mp3,"So thanks to all of that, the CPU usage of Piper is impressive and it's low latency real-time capable.",0,0
-data/train/6_119.mp3,"In fact, if you have a look at some graphs and we compare Piper with PulseAudio, we can see that in the following hardware, an Intel Core i7,",0,0
+data/train/6_118.mp3,"So thanks to all of that, the CPU usage of Pipewire is impressive and it's low latency real-time capable.",0,1
+data/train/6_119.mp3,"In fact, if you have a look at some graphs and we compare Pipewire with PulseAudio, we can see that in the following hardware, an Intel Core i7,",0,1
 data/train/6_120.mp3,"We can see on the left chart, so we have on the bottom, the x-axis is basically the buffer size and the y-axis is the CPU percentage.",0,0
 data/train/6_121.mp3,"So we can see that for buffers, for big buffers of",0,0
 data/train/6_122.mp3,8192 samples.,0,0
-data/train/6_123.mp3,"Piper and Jack, the performance, the CPU usage is mostly the same.",0,0
+data/train/6_123.mp3,"Pipewire and Jack, the performance, the CPU usage is mostly the same.",0,1
 data/train/6_124.mp3,"Piper is 0.001% of CPU usage, while PulseAudio is 0.005%.",0,0
 data/train/6_125.mp3,"However, if we reduce the buffer size up to 64 samples, we can see that the performance and the CPU usage",0,0
 data/train/6_126.mp3,"with PulseAudio increases quite significantly, while Piper is only 0.03%.",0,0
 data/train/6_127.mp3,"The graph on the right is the same, but it's an example of mixing two different files, mixing a 41.1 kHz file with a 48 kHz file.",0,0
 data/train/6_128.mp3,"The performance is also very, very impressive.",0,0
-data/train/6_129.mp3,"For buffers of 512 samples, which is about 10 milliseconds, the CPU usage for Piper is only 0.007% and for PulseAudio is 0.2%.",0,0
-data/train/6_130.mp3,"If we compare Piper against Jack, the performance is mostly similar, especially for big buffers of 8000 samples.",0,0
+data/train/6_129.mp3,"For buffers of 512 samples, which is about 10 milliseconds, the CPU usage for Pipewire is only 0.007% and for PulseAudio is 0.2%.",0,1
+data/train/6_130.mp3,"If we compare Pipewire against Jack, the performance is mostly similar, especially for big buffers of 8000 samples.",0,1
 data/train/6_131.mp3,"on the graph on the left, that it's the same.",0,0
 data/train/6_132.mp3,"But again, if you reduce the buffer sizes to achieve a low latency, and you want to have a buffer size of 128 samples, which is about four milliseconds, the performance usage is lower than Jack.",0,0
-data/train/6_133.mp3,"So in PipeRace, 0.017%.",0,0
+data/train/6_133.mp3,"So in Pipewire is, 0.017%.",0,1
 data/train/6_134.mp3,whereas in Jack it's 0.6%.,0,0
-data/train/6_135.mp3,"So yeah, as you reduce the buffer size, you can see that the performance, it's faster, it's better in Piper than Jack.",0,0
-data/train/6_136.mp3,"Now, security, the way it works is the Session Manager grants permissions to your applications in Piper.",0,0
+data/train/6_135.mp3,"So yeah, as you reduce the buffer size, you can see that the performance, it's faster, it's better in Pipewire than Jack.",0,1
+data/train/6_136.mp3,"Now, security, the way it works is the Session Manager grants permissions to your applications in Pipewire.",0,1
 data/train/6_137.mp3,The Session Manager basically can decide,0,0
 data/train/6_138.mp3,what application can have permissions to access a specific device or not.,0,0
-data/train/6_139.mp3,And the Pipeware nodes can be only visible for some applications.,0,0
+data/train/6_139.mp3,And the Pipewire nodes can be only visible for some applications.,0,1
 data/train/6_140.mp3,The session manager can make visible... Applications can see only part of the whole node graph if they want.,0,0
 data/train/6_141.mp3,"Now, there's three kinds of permissions.",0,0
 data/train/6_142.mp3,"There's read permissions, write permissions, and there's executable permissions.",0,0
@@ -1788,41 +1788,41 @@ data/train/6_143.mp3,The read permissions allows you to see the node and capture
 data/train/6_144.mp3,The write permissions allows you to play buffers in a node.,0,0
 data/train/6_145.mp3,And the execute permissions allows you to configure,0,0
 data/train/6_146.mp3,basically it allows you to set up a format and all of that.,0,0
-data/train/6_147.mp3,"The External Session Manager, Piper, it's not included in the Piper project.",0,0
+data/train/6_147.mp3,"The External Session Manager, Pipewire, it's not included in the Pipewire project.",0,1
 data/train/6_148.mp3,It's an external project.,0,0
-data/train/6_149.mp3,"It's not maintained by the Piper developers, but it's the one charged to create and configure the devices that emits then later the Piper nodes.",0,0
+data/train/6_149.mp3,"It's not maintained by the Pipewire developers, but it's the one charged to create and configure the devices that emits then later the Pipewire nodes.",0,1
 data/train/6_150.mp3,It's also the one charged to,0,0
-data/train/6_151.mp3,"set up nodes, format, port, et cetera, create links based on its policy logic when a client connects, grant security and access control to clients, and it's also launched by the Piper demo startup.",0,0
-data/train/6_152.mp3,"The current state of Piper is version 0.3.15, released in November 2020.",0,0
+data/train/6_151.mp3,"set up nodes, format, port, et cetera, create links based on its policy logic when a client connects, grant security and access control to clients, and it's also launched by the Pipewire demo startup.",0,1
+data/train/6_152.mp3,"The current state of Pipewire is version 0.3.15, released in November 2020.",0,1
 data/train/6_153.mp3,There were some major improvements in this release.,0,0
-data/train/6_154.mp3,So one of the biggest improvements was that Piper reused the Alzacar profile code from PulseAudio.,0,0
+data/train/6_154.mp3,So one of the biggest improvements was that Pipewire reused the Alsa card profile code from PulseAudio.,0,1
 data/train/6_155.mp3,"So now devices support all profiles, UCM and hardware mixes that PulseAudio implements.",0,0
-data/train/6_156.mp3,So Piper basically,0,0
+data/train/6_156.mp3,So Pipewire basically,0,1
 data/train/6_157.mp3,Right now the behavior is mostly the same as PulseAudio and PulseAudio can be entirely replaced right now.,0,0
-data/train/6_158.mp3,Tools such as the PulseAudio Volume Control works with Piper.,0,0
+data/train/6_158.mp3,Tools such as the PulseAudio Volume Control works with Pipewire.,0,1
 data/train/6_159.mp3,Then there was a lot of improvements in Bluetooth.,0,0
 data/train/6_160.mp3,So the HTTP profile and HSP profile work now with the basic codecs.,0,0
 data/train/6_161.mp3,They work for most devices.,0,0
 data/train/6_162.mp3,Support for MSBC codec is ongoing.,0,0
-data/train/6_163.mp3,Most of the Jack application works in Piper.,0,0
+data/train/6_163.mp3,Most of the Jack application works in Pipewire.,0,1
 data/train/6_164.mp3,The musical instrument digital interface works.,0,0
-data/train/6_165.mp3,"Video capture from video-for-linear sources, they work very well.",0,0
+data/train/6_165.mp3,"Video capture from video4linux sources, they work very well.",0,1
 data/train/6_166.mp3,And Wayland screencasting from Western GNOME Shell and Wayland Root is also supported.,0,0
 data/train/6_167.mp3,Who started the project?,0,0
-data/train/6_168.mp3,"The project is started by Wintimons, which is a well-known old distro developer and ex-maintainer.",0,0
+data/train/6_168.mp3,"The project is started by Wim Taymons, which is a well-known old distro developer and ex-maintainer.",0,1
 data/train/6_169.mp3,It's sponsored by Red Hat.,0,0
 data/train/6_170.mp3,It's embraced by Pulse Audio developers because it's seen as the next generation of Pulse Audio.,0,0
-data/train/6_171.mp3,And it's welcomed by ALS and JAG developers.,0,0
+data/train/6_171.mp3,And it's welcomed by ALSA and jack developers.,0,1
 data/train/6_172.mp3,Another interesting feature is that the license is MIT.,0,0
-data/train/6_173.mp3,"Before moving on to the next part, which is explaining how Piper can be used for the automotive world,",0,0
+data/train/6_173.mp3,"Before moving on to the next part, which is explaining how Pipewire can be used for the automotive world,",0,1
 data/train/6_174.mp3,I'd like to mention some contributions I have made in the project.,0,0
-data/train/6_175.mp3,"In Piper, there is a tool called PiperDot that generates a dot graph showing all the Piper objects and links similar to the streamer.",0,0
+data/train/6_175.mp3,"In Pipewire, there is a tool called Pipewire Dot that generates a dot graph showing all the Piperwire objects and links similar to Gstreamer.",0,1
 data/train/6_176.mp3,which is very handy for debugging.,0,0
 data/train/6_177.mp3,"And most of the Bluetooth support, I did a lot of Bluetooth support, so I fixed several HTTP issues in some devices.",0,0
 data/train/6_178.mp3,"I have support for HTTP sources using the SBC codec, and I had support for HSP and HFP profile using the CVSD codec.",0,0
 data/train/6_179.mp3,"Okay, so that was the first part of the talk.",0,0
-data/train/6_180.mp3,And now I'm going to move on Piper in the automotive industry section.,0,0
-data/train/6_181.mp3,So why Piper suits perfectly the automotive world?,0,0
+data/train/6_180.mp3,And now I'm going to move on Pipewire in the automotive industry section.,0,1
+data/train/6_181.mp3,So why Pipewire suits perfectly the automotive world?,0,1
 data/train/6_182.mp3,The current problem is device handling in connected cars is complex because,0,0
 data/train/6_183.mp3,"Cars, they have a lot of multimedia devices.",0,0
 data/train/6_184.mp3,"Cars have a lot of cameras, they have a lot of speakers, and on top of that, all of them can work at the same time.",0,0
@@ -1836,17 +1836,17 @@ data/train/6_191.mp3,"or maybe you want to use the camera, the back camera when 
 data/train/6_192.mp3,"So again, plenty of devices, plenty of speakers, plenty of streams.",0,0
 data/train/6_193.mp3,How do we handle that properly?,0,0
 data/train/6_194.mp3,It's very hard to do that with Pulse audio without hacking into it.,0,0
-data/train/6_195.mp3,So the solution is Piper with a flexible external session manager.,0,0
+data/train/6_195.mp3,So the solution is Pipewire with a flexible external session manager.,0,1
 data/train/6_196.mp3,"that allows you to do custom policy logic, custom hardware pipelines, hardware control abstraction and security.",0,0
-data/train/6_197.mp3,"Now, since Pipework doesn't include a proper and extensible session manager, here at Collabora, we have decided to create the first",0,0
-data/train/6_198.mp3,external and extensible session manager for Pipeware called Wipelumber.,0,0
-data/train/6_199.mp3,"We decided to do this because we also had a client, we had an automotive Linux client who wanted to adopt Pipeware as the core of their audio system into their system.",0,0
+data/train/6_197.mp3,"Now, since Pipewire doesn't include a proper and extensible session manager, here at Collabora, we have decided to create the first",0,1
+data/train/6_198.mp3,external and extensible session manager for Pipewire called Wireplumber.,0,1
+data/train/6_199.mp3,"We decided to do this because we also had a client, we had an automotive Linux client who wanted to adopt Pipewire as the core of their audio system into their system.",0,1
 data/train/6_200.mp3,and we had to basically develop a session manager for them.,0,0
 data/train/6_201.mp3,"So it was already focused on embedded only, but, you know, a lot of work has been done, and now it's a generic and fully-featured session manager for both embedded and desktop.",0,0
-data/train/6_202.mp3,"Another thing to note is that YPrime is based on GObject to support writing bindings in other languages, such as Rust, Python, and Lua.",0,0
-data/train/6_203.mp3,because at some point we want users to have an even higher API to basically control Piper.,0,0
-data/train/6_204.mp3,"We want users to control Piper using, for example, a Python script.",0,0
-data/train/6_205.mp3,"So, basically, WebNumber, since it's a higher-level API, it introduces three new objects.",0,0
+data/train/6_202.mp3,"Another thing to note is that WirePlumber is based on GObject to support writing bindings in other languages, such as Rust, Python, and Lua.",0,1
+data/train/6_203.mp3,because at some point we want users to have an even higher API to basically control Pipewire.,0,1
+data/train/6_204.mp3,"We want users to control Pipewire using, for example, a Python script.",0,1
+data/train/6_205.mp3,"So, basically, WirePlumber, since it's a higher-level API, it introduces three new objects.",0,1
 data/train/6_206.mp3,"So, it introduces the concept of an endpoint.",0,0
 data/train/6_207.mp3,"So, an endpoint is basically a set of nodes that follows a similar specific logic.",0,0
 data/train/6_208.mp3,"This is very useful for devices that expose a lot of nodes, but a lot of them need to be treated in the same way.",0,0
@@ -1860,10 +1860,10 @@ data/train/6_215.mp3,"It's like a port for endpoints, sorry.",0,0
 data/train/6_216.mp3,"And finally, we have also the concept of sessions, which is a set of endpoints.",0,0
 data/train/6_217.mp3,And this is also important because it makes it easy to grant permissions to just a group of endpoints.,0,0
 data/train/6_218.mp3,It's not instead of just one by one.,0,0
-data/train/6_219.mp3,"So at the moment, YPlumber creates a video session and an audio session.",0,0
+data/train/6_219.mp3,"So at the moment, WirePlumber creates a video session and an audio session.",0,1
 data/train/6_220.mp3,And it basically assigns a session to an endpoint.,0,0
 data/train/6_221.mp3,"So in this graph, we can see an example of two software DSP endpoints.",0,0
-data/train/6_222.mp3,"This is, for example, when running WebRamble in a laptop.",0,0
+data/train/6_222.mp3,"This is, for example, when running WirePlumber in a laptop.",0,1
 data/train/6_223.mp3,"So in a laptop, we have the same, we use the same audio device for both music and notification.",0,0
 data/train/6_224.mp3,So the endpoint basically wraps,0,0
 data/train/6_225.mp3,"the same node and adds two conversions for different volume controls, one for music and one for notifications.",0,0
@@ -1873,23 +1873,23 @@ data/train/6_228.mp3,for the notifications.,0,0
 data/train/6_229.mp3,We might have different hardware devices depending on the stream.,0,0
 data/train/6_230.mp3,We might have a hardware device for navigation and one for notifications.,0,0
 data/train/6_231.mp3,"So in this case, the endpoint would wrap those two nodes into one endpoint and would link the music stream with the",0,0
-data/train/6_232.mp3,the Alsosub device and the notification with the proper notification Alsosub device.,0,0
+data/train/6_232.mp3,the Alsa sub device and the notification with the proper notification Alsa sub device.,0,1
 data/train/6_233.mp3,"But basically, it hides the complexity of dealing with these different nodes and the policy logic would be the same for both desktop and embedded and automotive.",0,0
-data/train/6_234.mp3,"So the design of wirepromver, it's essentially a library.",0,0
-data/train/6_235.mp3,So wireprom is essentially a library that allows you to write in a much easier way other pipe or session managers.,0,0
-data/train/6_236.mp3,And it also provides an executable that basically executes load modules written using that wirepromver library that have all the different functionality.,0,0
-data/train/6_237.mp3,"So users can just use the library to write their own PyProcessor manual, or they can use the already existing modules to do PyPro logic.",0,0
-data/train/6_238.mp3,"An example of YPrime modules is the monitor module, which basically monitor devices and creates nodes when enabled.",0,0
-data/train/6_239.mp3,We have also the YPromo client permission modules that grant permissions to clients when connected.,0,0
+data/train/6_234.mp3,"So the design of WirePlumber, it's essentially a library.",0,1
+data/train/6_235.mp3,So WirePlumber is essentially a library that allows you to write in a much easier way other pipewire session managers.,0,1
+data/train/6_236.mp3,And it also provides an executable that basically executes load modules written using that WirePlumber library that have all the different functionality.,0,1
+data/train/6_237.mp3,"So users can just use the library to write their own Pipewire manual, or they can use the already existing modules to do Pipewire logic.",0,1
+data/train/6_238.mp3,"An example of WirePlumber modules is the monitor module, which basically monitor devices and creates nodes when enabled.",0,1
+data/train/6_239.mp3,We have also the WirePlumber client permission modules that grant permissions to clients when connected.,0,1
 data/train/6_240.mp3,We have the configuration endpoint module that basically creates endpoints based on configuration files.,0,0
 data/train/6_241.mp3,And we have the config policy module that basically is the one charged to create links between endpoints based on configuration files.,0,0
 data/train/6_242.mp3,But users can decide whether they want to load these modules and implement their own modules.,0,0
-data/train/6_243.mp3,"In the future, we plan to add bindings in order to have a higher-level API, as I said before, to avoid using, obviously, the low-level Piper API and objects.",0,0
+data/train/6_243.mp3,"In the future, we plan to add bindings in order to have a higher-level API, as I said before, to avoid using, obviously, the low-level Pipewire API and objects.",0,1
 data/train/6_244.mp3,"And we also want to, because at the moment",0,0
 data/train/6_245.mp3,"the modules are reading configuration files, but we would like them to read also scripting files such as Lua to have more flexibility when writing policy logic or endpoint creation logic.",0,0
 data/train/6_246.mp3,The current status of wireplumber is version 0.3.0.,0,0
-data/train/6_247.mp3,"The first version was 0.1.0, which was released last year in July, and it was used in AGL Happy Hollywood 8.0 branch.",0,0
-data/train/6_248.mp3,"Then version 0.2 was released last December 2019, and it was used both in AGL Happy Hollywood and Ichi Icefish.",0,0
+data/train/6_247.mp3,"The first version was 0.1.0, which was released last year in July, and it was used in AGL Happy Halibut 8.0 branch.",0,1
+data/train/6_248.mp3,"Then version 0.2 was released last December 2019, and it was used both in AGL Happy Halibut and Itchy Icefish.",0,1
 data/train/6_249.mp3,"Version 0.3 was released in June this year, which was the first release with support for desktop.",0,0
 data/train/6_250.mp3,"And we probably are going to do a release at the end of this year or beginning next year with API improvements, with scripting bindings.",0,0
 data/train/6_251.mp3,"And we want also to stabilize the API because it's always, at the moment, it's always changing because we are trying to figure out the best cases.",0,0
@@ -1897,47 +1897,47 @@ data/train/6_252.mp3,"So again, future release will support bindings, improve th
 data/train/6_253.mp3,It will improve also the documentation and it will add more unit tests and examples so that people can contribute to it.,0,0
 data/train/6_254.mp3,So who started this project?,0,0
 data/train/6_255.mp3,The owner of the project is George.,0,0
-data/train/6_256.mp3,He's working at Collaborative.,0,0
-data/train/6_257.mp3,The project Wireplumber is sponsored by Collabra.,0,0
-data/train/6_258.mp3,It's welcomed by Piper developers.,0,0
-data/train/6_259.mp3,"You've got the Git repository and documentation there if you want to know, and the license is the same as Piper, it's MIT.",0,0
+data/train/6_256.mp3,He's working at Collabora too.,0,1
+data/train/6_257.mp3,The project Wireplumber is sponsored by Collabora.,0,1
+data/train/6_258.mp3,It's welcomed by Pipewire developers.,0,1
+data/train/6_259.mp3,"You've got the Git repository and documentation there if you want to know, and the license is the same as Pipewire, it's MIT.",0,1
 data/train/6_260.mp3,And that's it for this talk.,0,0
 data/train/6_261.mp3,I'm going to show you now a demonstration so you can have a better idea of how all of this works.,0,0
 data/train/6_262.mp3,It's a demonstration I pre-recorded.,0,0
-data/train/6_263.mp3,It's going to basically show the users of both Piper and YPrimer projects.,0,0
+data/train/6_263.mp3,It's going to basically show the users of both Pipewire and WirePlumber projects.,0,1
 data/train/6_264.mp3,"OK, so welcome back.",0,0
-data/train/6_265.mp3,"So yeah, in this demonstration what I want to show you is how to use PyPore and Yplumber on your desktop, which can be quite interesting for some of you if you want to play a little bit with this technology and also have",0,0
+data/train/6_265.mp3,"So yeah, in this demonstration what I want to show you is how to use Pipewire and WirePlumber on your desktop, which can be quite interesting for some of you if you want to play a little bit with this technology and also have",0,1
 data/train/6_266.mp3,"you know, a better feeling of how an audio server works.",0,0
-data/train/6_267.mp3,"So, as you can see here, I have on my left terminal the Pipewire project already configured and built, and the same on the right terminal with RightPlumber.",0,0
-data/train/6_268.mp3,"So I'm going to basically run first Pipewire here on the left, and then RightPlumber.",0,0
+data/train/6_267.mp3,"So, as you can see here, I have on my left terminal the Pipewire project already configured and built, and the same on the right terminal with WirePlumber.",0,1
+data/train/6_268.mp3,"So I'm going to basically run first Pipewire here on the left, and then WirePlumber.",0,1
 data/train/6_269.mp3,"But before doing that, I want to open a couple more terminals,",0,0
 data/train/6_270.mp3,because I'm going to use these terminals to run the client.,0,0
 data/train/6_271.mp3,"Now, by default, if I just run an audio client here, such as MPlayer, it's going to connect to the default audio server of my distro, which is PulseAudio, and we don't want to do that.",0,0
 data/train/6_272.mp3,We want them to connect to Pipewire.,0,0
-data/train/6_273.mp3,"We are going to run make shell that basically sets a bunch of environment variables, such as the path, which allows you to use the PyPort tools you just already built, or the LD library path, which points to the build directory of the PyPort we just built and we are going to run.",0,0
-data/train/6_274.mp3,"So MakeShell allows us to run clients within this shell, and they will automatically connect to Piper, which makes it very easy to test Piper.",0,0
+data/train/6_273.mp3,"We are going to run make shell that basically sets a bunch of environment variables, such as the path, which allows you to use the Pipewire tools you just already built, or the LD library path, which points to the build directory of the Pipewire we just built and we are going to run.",0,1
+data/train/6_274.mp3,"So MakeShell allows us to run clients within this shell, and they will automatically connect to Pipewire, which makes it very easy to test Pipewire.",0,1
 data/train/6_275.mp3,"So I'm going to open up a bunch more tabs because we're going to use several clients, and we're going to run MakeShell on all of them.",0,0
 data/train/6_276.mp3,I think five should be enough.,0,0
-data/train/6_277.mp3,"So yeah, now, once everything is ready, we are going to run Pipeware with make run, and we are going to run Pipelumber with the log enabled, so you can see that it's basically doing some stuff.",0,0
+data/train/6_277.mp3,"So yeah, now, once everything is ready, we are going to run Pipewire with make run, and we are going to run Wireplumber with the log enabled, so you can see that it's basically doing some stuff.",0,1
 data/train/6_278.mp3,"Now, you're going to also see some warning messages, such as device being busy.",0,0
 data/train/6_279.mp3,"And this is because I'm recording using my microphone, so that device is used by the screen recorder.",0,0
 data/train/6_280.mp3,"But it should be fine for what we are going to do, so don't worry too much about that.",0,0
-data/train/6_281.mp3,"So everything is running, this is a log of Piper, and now we are going to try to play some audio.",0,0
+data/train/6_281.mp3,"So everything is running, this is a log of Pipewire, and now we are going to try to play some audio.",0,1
 data/train/6_282.mp3,"for example, this one.",0,0
 data/train/6_283.mp3,"Now, MPlayer, by default, uses the PulseAudio API.",0,0
-data/train/6_284.mp3,"So when I run this, what it's going to do is it's going to use the libPulse compatibility API of Pipeware.",0,0
-data/train/6_285.mp3,"And that library, internally, it's going to tell Pipeware that a new client comes in.",0,0
+data/train/6_284.mp3,"So when I run this, what it's going to do is it's going to use the libPulse compatibility API of Pipewire.",0,1
+data/train/6_285.mp3,"And that library, internally, it's going to tell Pipewire that a new client comes in.",0,1
 data/train/6_286.mp3,And it's going to notify the session manager.,0,0
 data/train/6_287.mp3,And the session manager is going to basically create the nodes and link the nodes based on the custom policy.,0,0
 data/train/6_288.mp3,So I run it and you can hear that music is playing.,0,0
 data/train/6_289.mp3,We can also see some warnings of the PulseAudio compatibility API library.,0,0
 data/train/6_290.mp3,"Not all features are implemented yet, but we can hear music.",0,0
-data/train/6_291.mp3,Now I'm gonna use the pipeware dot tool to generate a dot graph similar to GStreamer and we can see that,0,0
+data/train/6_291.mp3,Now I'm gonna use the Pipewire dot tool to generate a dot graph similar to GStreamer and we can see that,0,1
 data/train/6_292.mp3,"you know, the nodes are basically connected.",0,0
-data/train/6_293.mp3,"It's very easy to use, you just do piper.",0,0
-data/train/6_294.mp3,"and then the name of the file where you want the graph to be written and then we can view the graph with tools such as x. So yeah, we can see this here, that backnumber linked the different nodes.",0,0
+data/train/6_293.mp3,"It's very easy to use, you just do Pipewire.",0,1
+data/train/6_294.mp3,"and then the name of the file where you want the graph to be written and then we can view the graph with tools such as x. So yeah, we can see this here, that Wireplumber linked the different nodes.",0,1
 data/train/6_295.mp3,So the green squares here are,0,0
-data/train/6_296.mp3,nodes the red square are the output port and the purple squares are the input ports and the blue squares are actually the links created by the wired number so this also playback node is actually the end player client,0,0
+data/train/6_296.mp3,nodes the red square are the output port and the purple squares are the input ports and the blue squares are actually the links created by the Wireplumber so this also playback node is actually the end player client,0,1
 data/train/6_297.mp3,"that has two channels, the left channel and the right channel and is connected to a converter and that converter is connected to the default ALSA node which is my speakers on my laptop we can actually view more information if we run it with the detail",0,0
 data/train/6_298.mp3,option and we can see more properties.,0,0
 data/train/6_299.mp3,It makes the graph much bigger.,0,0
@@ -1948,7 +1948,7 @@ data/train/6_303.mp3,And we can see that it's monitoring all the audio being pla
 data/train/6_304.mp3,"And we can also change the volume, for example.",0,0
 data/train/6_305.mp3,We can see also some warnings here because not all the compatibility APIs are implemented yet.,0,0
 data/train/6_306.mp3,"But yeah, it's working nicely.",0,0
-data/train/6_307.mp3,"And we can see then now here, if we run the Pipeware tool,",0,0
+data/train/6_307.mp3,"And we can see then now here, if we run the Pipewire tool,",0,1
 data/train/6_308.mp3,that it's created more links.,0,0
 data/train/6_309.mp3,"Now all the input nodes, they have a monitor port and basically the Pulse Audio Volume Control uses those monitor ports and creates these nodes to actually monitor the audio coming out.",0,0
 data/train/6_310.mp3,So that's why we see this here.,0,0
