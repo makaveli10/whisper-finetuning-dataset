@@ -1350,9 +1350,9 @@ data/train/7_1.mp3,"We're here to talk today about how to build out sustainable 
 data/train/7_2.mp3,of testing QA and CI throughout upstream open source projects so we can really drive the adoption of open source and get what vendors actually distribute to users to be much much closer,0,0
 data/train/7_3.mp3,to the actual projects themselves.,0,0
 data/train/7_4.mp3,So my name's Daniel Stone.,0,0
-data/train/7_5.mp3,"I'm the graphics lead at Calabra, covering projects such as Mesa, Wayland, Western, and the FreeDesktop.org ecosystem.",0,0
-data/train/7_6.mp3,"Hello everyone, my name is Guillaume Tucker and I also work at Colabra.",0,0
-data/train/7_7.mp3,"I've been leading the KernelCI project in general and also I've been working on it as part of Colabra for the past three, four years.",0,0
+data/train/7_5.mp3,"I'm the graphics lead at Collabora, covering projects such as Mesa, Wayland, Weston, and the FreeDesktop.org ecosystem.",0,1
+data/train/7_6.mp3,"Hello everyone, my name is Guillaume Tucker and I also work at Collabora.",0,1
+data/train/7_7.mp3,"I've been leading the KernelCI project in general and also I've been working on it as part of Collabora for the past three, four years.",0,1
 data/train/7_8.mp3,I'm currently also chair of the advisory board for the Linux Foundation project.,0,0
 data/train/7_9.mp3,So today we're going to cover a few areas.,0,0
 data/train/7_10.mp3,"In particular, we're going to start with the existing ecosystem that we have with upstream open source projects, which projects are interesting to us, the challenges we faced as we've driven heavily the adoption of these more rigorous testing and CI and QA procedures throughout them.",0,0
@@ -1370,7 +1370,7 @@ data/train/7_21.mp3,with all of the cost falling on Novendo and none of the bene
 data/train/7_22.mp3,But we do believe it's possible to bridge this gap.,0,0
 data/train/7_23.mp3,"So yeah, today we'll be talking about a lot of the work we've done throughout various projects to bring this more native testing and CI and",0,0
 data/train/7_24.mp3,just take it into the process for all of these projects.,0,0
-data/train/7_25.mp3,"So the projects we've been working with include the Linux kernel itself, Mesa, which is the de facto standard for open source graphics drivers and acceleration, Wayland and Western, the again de facto standard window and display system under Linux,",0,0
+data/train/7_25.mp3,"So the projects we've been working with include the Linux kernel itself, Mesa, which is the de facto standard for open source graphics drivers and acceleration, Wayland and Weston, the again de facto standard window and display system under Linux,",0,1
 data/train/7_26.mp3,and GStreamer for multimedia support as well.,0,0
 data/train/7_27.mp3,"So starting with a Linux kernel, we'll go through how the kernel development workflow typically works.",0,0
 data/train/7_28.mp3,"So first of all, you have developers sending patches via mailing lists, then maintainers apply patches after some review on their own branches, on their own Git trees.",0,0
@@ -1395,7 +1395,7 @@ data/train/7_46.mp3,And then KernelCI will build some kernels and also build the
 data/train/7_47.mp3,and share the results and then report the results via emails or a web dashboard to the developers and that's how the loop is closed.,0,0
 data/train/7_48.mp3,"To understand a bit better what the developers actually need in order for Konocii to be more widely used, we've run a survey in 2020.",0,0
 data/train/7_49.mp3,We called it the Community Survey.,0,0
-data/train/7_50.mp3,"There's a blog post available on konocii.org website if you want to read the whole report, but here there's a small summary of the main takeaways from that survey.",0,0
+data/train/7_50.mp3,"There's a blog post available on kernelci.org website if you want to read the whole report, but here there's a small summary of the main takeaways from that survey.",0,1
 data/train/7_51.mp3,"So ideally we would need to test patches before they get applied, so like pre-merge if you want to call it like this, because then you get really short feedback circuits.",0,0
 data/train/7_52.mp3,"So when someone sends some patch on a mailing list, you could get a reply really quickly whether it's breaking anything or not.",0,0
 data/train/7_53.mp3,That's really important based on the results from the survey.,0,0
@@ -1403,7 +1403,7 @@ data/train/7_54.mp3,"And then for things that are run post-merge, it seems like 
 data/train/7_55.mp3,especially say on stable kernels when it's normally like one release per week.,0,0
 data/train/7_56.mp3,It should be okay to have like tests that take 24 hours for example.,0,0
 data/train/7_57.mp3,And then the third thing is improving the web dashboard.,0,0
-data/train/7_58.mp3,So we have currently one dashboard on kernalci.org.,0,0
+data/train/7_58.mp3,So we have currently one dashboard on kernelci.org.,0,1
 data/train/7_59.mp3,It's been there for several years and it's showing the results but there's many things that could be done to really improve it so that more users would be using it.,0,0
 data/train/7_60.mp3,And we're collecting user stories.,0,0
 data/train/7_61.mp3,"Well, we're kind of collecting feedback, ideas and suggestions from anyone who would want to have, you know, what would be your ideal web dashboard.",0,0
@@ -1438,8 +1438,8 @@ data/train/7_89.mp3,"So the native tests, like I explained in the previous slide
 data/train/7_90.mp3,"And if you have your own test system, you can also, anybody can submit test results there.",0,0
 data/train/7_91.mp3,"So the idea is to avoid, to reduce duplication.",0,0
 data/train/7_92.mp3,"And in principle, a new web dashboard will be showing this information, which is like a superset of what you see right now on kernelci.org.",0,0
-data/train/7_93.mp3,"By opposition to the native tests, you have like the non-kernel-ci tests, things that are run outside of kernel-ci, the tests that are not orchestrated directly by kernel-ci, such as 0day and syscaller, a fuzzing bot, and Red Hat's CKI, and several tools from Lenaro as well.",0,0
-data/train/7_94.mp3,"There's Lenaro Kernel Functional Tests, LKFT,",0,0
+data/train/7_93.mp3,"By opposition to the native tests, you have like the non-kernel-ci tests, things that are run outside of kernel-ci, the tests that are not orchestrated directly by kernel-ci, such as 0day and syscaller, a fuzzing bot, and Red Hat's CKI, and several tools from Linaro as well.",0,1
+data/train/7_94.mp3,"There's Linaro Kernel Functional Tests, LKFT,",0,1
 data/train/7_95.mp3,"And TuckSuite, which is more like a service, everybody could subscribe to it to build kernels and also start to support running tests.",0,0
 data/train/7_96.mp3,"And the result of all these, and a few more actually from ARM and Gen2 KernelCI and a few more, all these results are currently being contributed to KCI-DB.",0,0
 data/train/7_97.mp3,"Actually, it's not all of syscaller, but some of them, because that's a huge dataset, but some of the syscaller results are being contributed to KCI-DB.",0,0
@@ -1472,7 +1472,7 @@ data/train/7_123.mp3,"And yeah, it's possible to do this with both actual hardwa
 data/train/7_124.mp3,hardware dependencies but will just run on any CPU with an LLVM backend.,0,0
 data/train/7_125.mp3,So doing that is a really nice little quiver in our bow I suppose to be able to test the core of Mesa without needing dedicated hardware.,0,0
 data/train/7_126.mp3,"So the testing that we do have in Mesa, that covers",0,0
-data/train/7_127.mp3,"several generations of all of AMD GPUs, the Mali GPUs, Broadcom's VideoCore in the Raspberry Pi, all of the Intel GPUs, the Qualcomm Adreno that comes in their Snapdragon SoCs, and also the Virosilicon or Vivante GPUs which tend to come in processors like NXP.",0,0
+data/train/7_127.mp3,"several generations of all of AMD GPUs, the Mali GPUs, Broadcom's VideoCore in the Raspberry Pi, all of the Intel GPUs, the Qualcomm Adreno that comes in their Snapdragon SoCs, and also the Verisilicon or Vivante GPUs which tend to come in processors like NXP.",0,1
 data/train/7_128.mp3,"And all of these have achieved, at least for some hardware generations or some API versions, official Khronos conformance.",0,0
 data/train/7_129.mp3,"So again, we're very keen to make sure that we keep that and we don't regress backwards.",0,0
 data/train/7_130.mp3,So we do quite extensive testing of those.,0,0
@@ -1492,11 +1492,11 @@ data/train/7_143.mp3,"And it's something that we have to get right, essentially,
 data/train/7_144.mp3,It turns out that having flaky tests which block people's MRs is a pretty good way to get developers to tell you what they really feel about your test suite.,0,0
 data/train/7_145.mp3,"If we look at other projects, Wayland and Weston were very early adopters of CI and having GitLab on FreeDesktop.org, but for the longest time they didn't get too far beyond build testing.",0,0
 data/train/7_146.mp3,That's because one of the challenges we have in Wayland is the lack of an official universal conformance test suite.,0,0
-data/train/7_147.mp3,"So we have all of the tests on the server side inside Western that we've written for ourselves as we've developed it, but we don't have a similar target like we do with the Khronos APIs to be able to work towards and give us a yes-no answer.",0,0
-data/train/7_148.mp3,"Even so, we're making use of... We actually test Western by starting up a new virtual machine with a clean known kernel and a virtual KMS driver which just simulates a display controller.",0,0
+data/train/7_147.mp3,"So we have all of the tests on the server side inside Weston that we've written for ourselves as we've developed it, but we don't have a similar target like we do with the Khronos APIs to be able to work towards and give us a yes-no answer.",0,1
+data/train/7_148.mp3,"Even so, we're making use of... We actually test Weston by starting up a new virtual machine with a clean known kernel and a virtual KMS driver which just simulates a display controller.",0,1
 data/train/7_149.mp3,And that gets us a lot of what we want because we're able to exercise a lot of different paths within our backends and make sure that they run,0,0
 data/train/7_150.mp3,About as well as you can when you're working with a virtual driver rather than a real hardware driver.,0,0
-data/train/7_151.mp3,"But yeah, that's where we are now for Wayland and Western.",0,0
+data/train/7_151.mp3,"But yeah, that's where we are now for Wayland and Weston.",0,1
 data/train/7_152.mp3,"The back-end testing, testing things like rendering correctness and internal consistency.",0,0
 data/train/7_153.mp3,But these are really home-built tests.,0,0
 data/train/7_154.mp3,"GStreamer on the other hand for multimedia, it's got a very well established set of tests which have almost always been there for both for its individual modules and also for end-to-end functional and integration testing.",0,0
@@ -1509,7 +1509,7 @@ data/train/7_160.mp3,"Again, concurrent with the move to GitLab on freedesktop.o
 data/train/7_161.mp3,But this is all happening as software-based testing.,0,0
 data/train/7_162.mp3,So it will run in containers and virtual machines on general purpose hosts.,0,0
 data/train/7_163.mp3,And we're not yet able to test how GStreamer behaves.,0,0
-data/train/7_164.mp3,"again with different hardware drivers, say for video for Linux or also for sound or any of those other inflection points.",0,0
+data/train/7_164.mp3,"again with different hardware drivers, say for video4Linux or alsa for sound or any of those other inflection points.",0,1
 data/train/7_165.mp3,"Now we've looked at how the kernel is being tested upstream and how graphics and Wayland and GStreamer are being tested upstream, we can start thinking about general concepts around what does it take to move an open source project to being really test-driven.",0,0
 data/train/7_166.mp3,"You can see, like we said at the beginning, commercial products, fully integrated products, are tested very thoroughly and they have control over their own universe, so there's no real barrier in terms of people adopting it because it's a team working on it, so they all basically",0,0
 data/train/7_167.mp3,"adopt the workflow and the automated testing, because that's just the way they do it, and have complete freedom over how they do this.",0,0
@@ -1526,8 +1526,8 @@ data/train/7_177.mp3,"For testing, people can provide tools and suggest ways of 
 data/train/7_178.mp3,"And as people see that there's value in it, and that it's something that they can adopt, then gradually it will be adopted.",0,0
 data/train/7_179.mp3,"So basically, this is what you can see this happening already, like we've explained with KernelCI.",0,0
 data/train/7_180.mp3,when some maintainers are starting to engage and look at the results.,0,0
-data/train/7_181.mp3,"And maybe if Codencii doesn't work, they have their own, or if it doesn't provide the results that they're looking for, they have their own manual test and they can still carry on.",0,0
-data/train/7_182.mp3,"Like for stable kernels, typically Codencii would be sending results for each stable kernel.",0,0
+data/train/7_181.mp3,"And maybe if KernelCI doesn't work, they have their own, or if it doesn't provide the results that they're looking for, they have their own manual test and they can still carry on.",0,1
+data/train/7_182.mp3,"Like for stable kernels, typically KernelCI would be sending results for each stable kernel.",0,1
 data/train/7_183.mp3,"So if the results are there and some problems were detected by KernelCI, something will get done about it.",0,0
 data/train/7_184.mp3,Some people will try to fix them.,0,0
 data/train/7_185.mp3,"But if for some reason KernelCI disappeared, the stable kernel will still be released.",0,0
@@ -1538,8 +1538,8 @@ data/train/7_189.mp3,"So this has already happened with Mesa-CI, like Daniel jus
 data/train/7_190.mp3,"And of course, sometimes you have a few sparkles in a clutch system, so it's not always easy to get it completely right without any smoke.",0,0
 data/train/7_191.mp3,coming out of it but that's it's really a price worth paying basically because now you know when a change comes in it has to pass the tests and that's really where you want to be.,0,0
 data/train/7_192.mp3,"So like I've just explained, you have some tools available.",0,0
-data/train/7_193.mp3,"So KernelSeer is one of them for the kernel, but also ZeroDay will be sending you emails, and SysBot will be doing this as well, fuzzing syscalls in the kernel to try to find corner cases that nobody else has found before.",0,0
-data/train/7_194.mp3,So these are available and of course they send results by email and if people don't like the emails that happens sometimes it's like this report is not useful people will reply and then things will get adjusted and yeah for Missa and Wayland and GStreamer maybe it's a little bit easier to have things enforced it's a bit like maybe like a subsystem in the kernel if you have a small enough subsystem,0,0
+data/train/7_193.mp3,"So KernelCI is one of them for the kernel, but also ZeroDay will be sending you emails, and SysBot will be doing this as well, fuzzing syscalls in the kernel to try to find corner cases that nobody else has found before.",0,1
+data/train/7_194.mp3,So these are available and of course they send results by email and if people don't like the emails that happens sometimes it's like this report is not useful people will reply and then things will get adjusted and yeah for Mesa and Wayland and GStreamer maybe it's a little bit easier to have things enforced it's a bit like maybe like a subsystem in the kernel if you have a small enough subsystem,0,1
 data/train/7_195.mp3,"then it could operate in its own autonomy, basically, and then decide to accept a test or workflow, test-driven workflow.",0,0
 data/train/7_196.mp3,So that's kind of the step-by-step process that we have to go through.,0,0
 data/train/7_197.mp3,"Yes, Daniel?",0,0
@@ -1598,7 +1598,7 @@ data/train/7_249.mp3,subject to a million things which are outside of our contro
 data/train/7_250.mp3,But it's still really useful to have.,0,0
 data/train/7_251.mp3,"I mean, KernelCI can test all of the kernel aspects, but it would be really useful for maintainers to know that, you know, their changes broke actual running user space workloads like Mesa or like GStreamer for media to code, and being able to have that fast integrated feedback.",0,0
 data/train/7_252.mp3,And this is true everywhere.,0,0
-data/train/7_253.mp3,"Conversely, Western pins a version of Mesa and KernelCI pins known versions of user space components just to keep the whole stack tractable.",0,0
+data/train/7_253.mp3,"Conversely, Weston pins a version of Mesa and KernelCI pins known versions of user space components just to keep the whole stack tractable.",0,1
 data/train/7_254.mp3,"So one thing we've been looking at and working on is being able to share our workloads, our definitions, and the ways we parameterize them as well.",0,0
 data/train/7_255.mp3,So we can bring in more integrated testing and be able to at least,0,0
 data/train/7_256.mp3,at least work on fragments of the tests.,0,0
@@ -1623,7 +1623,7 @@ data/train/7_274.mp3,But this is obviously only possible if you have a much smal
 data/train/7_275.mp3,"So for the first time there's a real incentive for vendors to work with Upstream, both in terms of the changes they make and also in terms of helping us with the QA, the CI and the testing that we do.",0,0
 data/train/7_276.mp3,"because everything done to upstream means you can ship better software to your customers faster, and it means that you can just have more and more assurance that what you're shipping is secure, it's validated, it's solid, and it will do what you need it to do.",0,0
 data/train/7_277.mp3,So that's our quick summary of the landscape.,0,0
-data/train/7_278.mp3,We'll have some more details available in a blog on collabra.com with a lot more details on,0,0
+data/train/7_278.mp3,We'll have some more details available in a blog on collabora.com with a lot more details on,0,1
 data/train/7_279.mp3,"how these upstream projects work, how to get involved and help out, especially with the testing angles.",0,0
 data/train/7_280.mp3,But this is the thing that's here.,0,0
 data/train/7_281.mp3,We're not talking about the old days where open source was a kind of wild west fun project.,0,0
@@ -1631,8 +1631,8 @@ data/train/7_282.mp3,and it was the vendors who brought some kind of rigor to th
 data/train/7_283.mp3,"It's now something that over time the open source projects have been able to embrace as part of their projects and their methodologies, and that's only going to increase.",0,0
 data/train/7_284.mp3,"All of these efforts, they're open to contributors.",0,0
 data/train/7_285.mp3,KernelCI is a Linux Foundation project.,0,0
-data/train/7_286.mp3,"MesaCI is something primarily being worked on by Collabra, Google, Legalia, Red Hat, Valve, all companies who are just interested in the long-term health of Mesa.",0,0
-data/train/7_287.mp3,"Similarly, Western, GStreamer, the testing infrastructure and development is shared between the entire community.",0,0
+data/train/7_286.mp3,"MesaCI is something primarily being worked on by Collabora, Google, Legalia, Red Hat, Valve, all companies who are just interested in the long-term health of Mesa.",0,1
+data/train/7_287.mp3,"Similarly, Weston, GStreamer, the testing infrastructure and development is shared between the entire community.",0,1
 data/train/7_288.mp3,"The more we do this, the more you can benefit from what we do upstream.",0,0
 data/train/7_289.mp3,So please come get involved.,0,0
 data/train/7_290.mp3,Don't be afraid.,0,0
